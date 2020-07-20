@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BoutiqueParfumsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="IdCart" />
+    </Key>
+    <Property Name="IdCart" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CartProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProduct" Type="int" Nullable="false" />
+    <Property Name="IdCart" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdCart" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="Prix" Type="float" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="Picture" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="IdCart">
+    <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+    <End Role="Client" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cart">
+        <PropertyRef Name="IdCart" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="IdCart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IdCart2">
+    <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+    <End Role="CartProduct" Type="Self.CartProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cart">
+        <PropertyRef Name="IdCart" />
+      </Principal>
+      <Dependent Role="CartProduct">
+        <PropertyRef Name="IdCart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IdProduct">
+    <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+    <End Role="CartProduct" Type="Self.CartProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CartProduct">
+        <PropertyRef Name="IdProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BoutiqueParfumsModelStoreContainer">
+    <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CartProduct" EntityType="Self.CartProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="IdCart" Association="Self.IdCart">
+      <End Role="Cart" EntitySet="Cart" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="IdCart2" Association="Self.IdCart2">
+      <End Role="Cart" EntitySet="Cart" />
+      <End Role="CartProduct" EntitySet="CartProduct" />
+    </AssociationSet>
+    <AssociationSet Name="IdProduct" Association="Self.IdProduct">
+      <End Role="Produit" EntitySet="Produit" />
+      <End Role="CartProduct" EntitySet="CartProduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

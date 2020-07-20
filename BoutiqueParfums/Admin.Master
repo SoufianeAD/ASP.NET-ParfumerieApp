@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BoutiqueParfums.Admin1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin</title>
+	<link href="resources/theme-admin/css/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages/css/shop-homepage.css" rel="stylesheet"/>
+	<link href="resources/theme-admin/css/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="resources/theme-admin/css/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/css/simple-sidebar.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+		<asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			   <a class="navbar-brand" href="#">Admin</a>
+			      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			        <span class="navbar-toggler-icon"></span>
+			      </button>
+			      <div class="collapse navbar-collapse" id="navbarResponsive">
+			        <ul class="navbar-nav ml-auto">
+				      	<li class="nav-item" >
+				      		<a class="btn btn-outline-secondary" href="#" style="margin-right: 5px;">
+						        <i class="fa fa-sign-out"></i> Déconnexion
+						    </a>
+				      	</li>
+			  		</ul>
+		      </div>
+		  </nav>
+		<div class="d-flex" id="wrapper">
+			<div class="bg-light border-right" id="sidebar-wrapper">
+		      <div class="sidebar-heading">Dashboard</div>
+		      <div class="list-group list-group-flush">
+				<a href="NewProduct.aspx" class="list-group-item list-group-item-action bg-light">Nouveau produit</a>
+		        <a href="ListProducts.aspx" class="list-group-item list-group-item-action bg-light">liste des produits</a>
+		      </div>
+		    </div>
+			<div id="page-content-wrapper">
+				<div class="container-fluid">
+					<div class="container border spacing" style="width: 60%; margin-top: 5%; margin-bottom: 5%; padding: 2% 2% 0% 2%;">
+						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+						</asp:ContentPlaceHolder>
+					</div>
+				</div>
+			</div>
+		</div>
+    </form>
+</body>
+</html>
