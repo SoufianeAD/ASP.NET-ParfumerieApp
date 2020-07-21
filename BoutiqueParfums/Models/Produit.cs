@@ -12,7 +12,7 @@ namespace BoutiqueParfums.Models
 
         public int Id { get; set; }
         public string Designation { get; set; }
-        public double Prix { get; set; }
+        public double? Prix { get; set; }
         public string Category { get; set; }
         public string Picture { get; set; }
 

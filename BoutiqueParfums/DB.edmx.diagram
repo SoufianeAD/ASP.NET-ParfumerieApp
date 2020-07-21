@@ -5,13 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="08704a979cb1498ca78b37242233360b" Name="Diagram1">
-        <EntityTypeShape EntityType="BoutiqueParfumsModel.Cart" Width="1.5" PointX="3.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoutiqueParfumsModel.CartProduct" Width="1.5" PointX="7.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoutiqueParfumsModel.Cart" Width="1.5" PointX="3.875" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoutiqueParfumsModel.CartProduct" Width="1.5" PointX="7.625" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BoutiqueParfumsModel.Client" Width="1.5" PointX="0.5" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BoutiqueParfumsModel.Produit" Width="1.5" PointX="11.25" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="BoutiqueParfumsModel.IdCart" ManuallyRouted="false" ></AssociationConnector>
         <AssociationConnector Association="BoutiqueParfumsModel.IdCart2" ManuallyRouted="false" />
         <AssociationConnector Association="BoutiqueParfumsModel.IdProduct" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BoutiqueParfumsModel.Message" Width="1.5" PointX="3.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

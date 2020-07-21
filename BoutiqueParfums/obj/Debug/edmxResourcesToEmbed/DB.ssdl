@@ -23,6 +23,16 @@
     <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="IdCart" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="MessageText" Type="varchar" MaxLength="500" />
+  </EntityType>
   <EntityType Name="Produit">
     <Key>
       <PropertyRef Name="Id" />
@@ -73,6 +83,7 @@
     <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CartProduct" EntityType="Self.CartProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="IdCart" Association="Self.IdCart">
       <End Role="Cart" EntitySet="Cart" />

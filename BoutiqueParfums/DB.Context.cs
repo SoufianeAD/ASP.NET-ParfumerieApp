@@ -29,5 +29,6 @@ namespace BoutiqueParfums
         public virtual DbSet<CartProduct> CartProducts { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Produit> Produits { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
     }
 }

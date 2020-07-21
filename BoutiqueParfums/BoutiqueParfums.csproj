@@ -243,6 +243,7 @@
     <Content Include="DB.edmx.diagram">
       <DependentUpon>DB.edmx</DependentUpon>
     </Content>
+    <Content Include="ListMessages.aspx" />
     <Content Include="ListProducts.aspx" />
     <Content Include="NewProduct.aspx" />
     <Content Include="resources\theme-admin\css\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\.travis.yml" />
@@ -488,6 +489,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ListMessages.aspx.cs">
+      <DependentUpon>ListMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListMessages.aspx.designer.cs">
+      <DependentUpon>ListMessages.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListProducts.aspx.cs">
       <DependentUpon>ListProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -495,11 +503,19 @@
     <Compile Include="ListProducts.aspx.designer.cs">
       <DependentUpon>ListProducts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Message.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\BoutiqueParfumsContext.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartProduct.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Produit.cs" />
+    <Compile Include="Model\BoutiqueParfumsContext.cs" />
+    <Compile Include="Model\Cart.cs" />
+    <Compile Include="Model\CartProduct.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Produit.cs" />
     <Compile Include="NewProduct.aspx.cs">
       <DependentUpon>NewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

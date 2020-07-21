@@ -25,8 +25,9 @@ namespace BoutiqueParfums
                     Designation = designation.Text,
                     Category = category.Text,
                     Prix = Convert.ToDouble(price.Text),
-                    Picture = pictureURL.Text
+                    Picture = Request.Form["pictureURL"]
                 };
+                clearInputs();
                 _Default.db.Produits.Add(produit);
                 _Default.db.SaveChanges();
             }
@@ -44,6 +45,18 @@ namespace BoutiqueParfums
                 }
                 throw;
             }
+        }
+
+        void clearInputs()
+        {
+            designation.Text = "";
+            category.Text = "";
+            price.Text = "";
+        }
+
+        protected void pictureURL_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

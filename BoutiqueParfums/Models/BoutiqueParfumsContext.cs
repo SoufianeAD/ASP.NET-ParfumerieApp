@@ -18,6 +18,7 @@ namespace BoutiqueParfums.Models
         public virtual DbSet<Cart> Cart { get; set; }
         public virtual DbSet<CartProduct> CartProduct { get; set; }
         public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Message> Message { get; set; }
         public virtual DbSet<Produit> Produit { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -71,6 +72,27 @@ namespace BoutiqueParfums.Models
                     .HasConstraintName("IdCart");
             });
 
+            modelBuilder.Entity<Message>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.MessageText)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Phone)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<Produit>(entity =>
             {
                 entity.Property(e => e.Category)
@@ -78,13 +100,11 @@ namespace BoutiqueParfums.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Designation)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Picture)
-                    .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
             });
 

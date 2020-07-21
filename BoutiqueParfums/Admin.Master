@@ -39,7 +39,7 @@
 			      <div class="collapse navbar-collapse" id="navbarResponsive">
 			        <ul class="navbar-nav ml-auto">
 				      	<li class="nav-item" >
-				      		<a class="btn btn-outline-secondary" href="#" style="margin-right: 5px;">
+				      		<a class="btn btn-outline-secondary" href="Default.aspx" style="margin-right: 5px;">
 						        <i class="fa fa-sign-out"></i> Déconnexion
 						    </a>
 				      	</li>
@@ -52,11 +52,12 @@
 		      <div class="list-group list-group-flush">
 				<a href="NewProduct.aspx" class="list-group-item list-group-item-action bg-light">Nouveau produit</a>
 		        <a href="ListProducts.aspx" class="list-group-item list-group-item-action bg-light">liste des produits</a>
+				<a href="ListMessages.aspx" class="list-group-item list-group-item-action bg-light">liste des messages</a>
 		      </div>
 		    </div>
 			<div id="page-content-wrapper">
 				<div class="container-fluid">
-					<div class="container border spacing" style="width: 60%; margin-top: 5%; margin-bottom: 5%; padding: 2% 2% 0% 2%;">
+					<div class="container border spacing" style="width: 80%; margin-top: 5%; margin-bottom: 5%; padding: 2% 2% 0% 2%;">
 						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 						</asp:ContentPlaceHolder>
 					</div>

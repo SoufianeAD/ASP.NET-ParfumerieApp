@@ -18,10 +18,23 @@
 		</div>
 		<div class="form-group">
 			<label>Image URL :</label>
-            <asp:TextBox class="form-control" ID="pictureURL" placeholder="URL" runat="server"></asp:TextBox>
+			<input type="text" id="pictureURL" name="pictureURL" class="form-control" placeholder="URL" onkeyup="updatePicture()" />
+		</div>
+		<div class="text-center" >
+            <img src="https://www1.specialolympicsontario.com/wp-content/uploads/2017/01/Insert-Photo-Here.jpg" id ="product" class="rounded" style="max-width: 200px; max-height: 200px;"/>
 		</div>
 		<div class="text-center">
-            <asp:Button ID="Ajouter" class="btn btn-primary to-right" runat="server" Text="Ajouter" OnClick="Ajouter_Click" />
+            <asp:Button ID="Ajouter" class="btn btn-primary to-right mt-4" runat="server" Text="Ajouter" OnClick="Ajouter_Click" />
 		</div>
 	</div>
+	<script  type ="text/javascript" >
+        function updatePicture() {
+            var url = document.getElementById("pictureURL").value;
+            var img = document.getElementById("product");
+            img.src = url;
+            img.onerror = function () {
+                img.src = "https://www.redanglagoon.com/notfound.png";
+            }
+        }
+	</script>
 </asp:Content>

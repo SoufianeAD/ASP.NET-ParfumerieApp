@@ -120,3 +120,4 @@ E:\Projects\DOTNET\BoutiqueParfums\BoutiqueParfums\bin\zh-Hant\Microsoft.Data.Sq
 E:\Projects\DOTNET\BoutiqueParfums\BoutiqueParfums\obj\Debug\BoutiqueParfums.csproj.CopyComplete
 E:\Projects\DOTNET\BoutiqueParfums\BoutiqueParfums\obj\Debug\BoutiqueParfums.dll
 E:\Projects\DOTNET\BoutiqueParfums\BoutiqueParfums\obj\Debug\BoutiqueParfums.pdb
+E:\Projects\DOTNET\BoutiqueParfums\BoutiqueParfums\obj\Debug\BoutiqueParfums.csprojAssemblyReference.cache
