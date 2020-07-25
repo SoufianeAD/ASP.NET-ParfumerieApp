@@ -209,6 +209,7 @@
     <Content Include="App_Data\DB_log.ldf">
       <DependentUpon>DB.mdf</DependentUpon>
     </Content>
+    <Content Include="ClientCart.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -245,6 +246,7 @@
     </Content>
     <Content Include="ListMessages.aspx" />
     <Content Include="ListProducts.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="NewProduct.aspx" />
     <Content Include="resources\theme-admin\css\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\.travis.yml" />
     <Content Include="resources\theme-admin\css\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\LICENSE" />
@@ -439,6 +441,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SignUpClient.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -463,6 +466,13 @@
     </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCart.aspx.cs">
+      <DependentUpon>ClientCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientCart.aspx.designer.cs">
+      <DependentUpon>ClientCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="DB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -503,6 +513,13 @@
     <Compile Include="ListProducts.aspx.designer.cs">
       <DependentUpon>ListProducts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -527,6 +544,13 @@
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpClient.aspx.cs">
+      <DependentUpon>SignUpClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUpClient.aspx.designer.cs">
+      <DependentUpon>SignUpClient.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
