@@ -23,16 +23,19 @@
 			<div  class="text-center border border-light p-5">
                 <a class="" href="Default.aspx"><img src="/resources/assets/img/navbar-logo.svg" alt="" /></a>
 			 	<p class="h4 mb-4 mt-3">Sign up</p>
+                <div class="form-group">
+                    <asp:TextBox class="form-control" ID="FirstName" placeholder="Nom" runat="server"></asp:TextBox>
+				</div>
+                <div class="form-group">
+                    <asp:TextBox class="form-control" ID="LastName" placeholder="Prénom" runat="server"></asp:TextBox>
+				</div>
 				<div class="form-group">
                     <asp:TextBox class="form-control" ID="Email" placeholder="Email" runat="server"></asp:TextBox>
 				</div>
 				<div class="form-group">
-                    <input  class="form-control" id="password" type="password" placeholder="password"/>
+                    <input  class="form-control" id="password" name="password" type="password" placeholder="password"/>
 				</div>
-                <div class="form-group">
-                    <asp:TextBox class="form-control" ID="ConfirmPassword" placeholder="Confirmation Password" runat="server"></asp:TextBox>
-				</div>
-                <asp:Button ID="Button1" runat="server" Text="S'Inscrire" class="btn btn-info mt-1"/>
+                <asp:Button ID="Button1" runat="server" Text="S'Inscrire" class="btn btn-info mt-1" OnClick="Button1_Click"/>
 				<div class="mt-3"><a href="Login.aspx">S'Authentifier</a></div>
 			</div>
 		</div>

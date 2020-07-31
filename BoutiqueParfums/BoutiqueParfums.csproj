@@ -248,6 +248,7 @@
     <Content Include="ListProducts.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NewProduct.aspx" />
+    <Content Include="ProductDetails.aspx" />
     <Content Include="resources\theme-admin\css\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\.travis.yml" />
     <Content Include="resources\theme-admin\css\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\LICENSE" />
     <Content Include="resources\theme-admin\css\startbootstrap-shop-homepage-gh-pages\startbootstrap-shop-homepage-gh-pages\package-lock.json" />
@@ -539,6 +540,13 @@
     </Compile>
     <Compile Include="NewProduct.aspx.designer.cs">
       <DependentUpon>NewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Produit.cs">
       <DependentUpon>DB.tt</DependentUpon>

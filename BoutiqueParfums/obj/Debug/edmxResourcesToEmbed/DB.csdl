@@ -27,6 +27,8 @@
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="IdCart" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Cart" Relationship="Self.IdCart" FromRole="Client" ToRole="Cart" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Produit">
     <Key>

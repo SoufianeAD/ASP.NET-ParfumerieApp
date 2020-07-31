@@ -13,5 +13,11 @@ namespace BoutiqueParfums
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Remove("UserIn");
+            Response.Redirect("Default.aspx#portfolio");
+        }
     }
 }

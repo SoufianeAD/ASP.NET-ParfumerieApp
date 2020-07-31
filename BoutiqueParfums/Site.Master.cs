@@ -13,5 +13,17 @@ namespace BoutiqueParfums
         {
 
         }
+
+        protected void cart_Click(object sender, EventArgs e)
+        {
+            if (Session["UserIn"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                Response.Redirect("ClientCart.aspx");
+            }
+        }
     }
 }

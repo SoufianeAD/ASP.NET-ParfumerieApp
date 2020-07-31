@@ -29,7 +29,13 @@
 				<div class="form-group">
                     <input  class="form-control" id="password" name="password" type="password" placeholder="password"/>
 				</div>
-                <asp:Button ID="Button1" runat="server" Text="Se connecter" class="btn btn-info mt-3 mb-3" OnClick="Button1_Click"/>
+                <%if (Session["message"] != null && !Session["message"].Equals(""))
+                    { %>
+                <div class="alert-danger">
+                    <p class="text-danger"><%= Session["message"] %></p>
+                </div>
+                <%} %>
+                <asp:Button ID="Button1" runat="server" Text="Se connecter" class="btn btn-info mt-3 mb-3" OnClick="Button1_Click" OnLoad="Button1_Load"/>
 				<div><a class="" href="SignUpClient.aspx">S'Inscrire</a></div>
 			</div>
 		</div>

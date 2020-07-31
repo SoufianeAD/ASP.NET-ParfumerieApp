@@ -19,6 +19,7 @@
     <style>
         #cart:hover {
             background-color: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
         }
     </style>
     <asp:PlaceHolder runat="server">
@@ -62,9 +63,9 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="Login.aspx" id="cart" >
+                            <asp:LinkButton ID="cart" runat="server" OnClick="cart_Click">
                                 <i class="fas fa-shopping-cart" style="color: yellow; font-size: 24px;"></i>
-                            </a>
+                            </asp:LinkButton>
                         </li>
                     </ul>
                 </div>

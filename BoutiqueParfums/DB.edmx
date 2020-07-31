@@ -27,6 +27,8 @@
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IdCart" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Message">
           <Key>
@@ -134,6 +136,8 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IdCart" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Cart" Relationship="Self.IdCart" FromRole="Client" ToRole="Cart" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Produit">
           <Key>
@@ -236,6 +240,8 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="BoutiqueParfumsModel.Client">
               <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />

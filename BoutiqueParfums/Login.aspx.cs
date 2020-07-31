@@ -11,19 +11,30 @@ namespace BoutiqueParfums
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
+
+        
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Client client = _Default.db.Clients.Where(c => c.Email == Email.Text && c.Password == Request.Form["password"]).FirstOrDefault();
-            if(client == null)
+            Session["message"] = "";
+            Client client = _Default.db.Clients.First(c => c.Email == Email.Text);
+            /*c => (c.Email == Email.Text) && (c.Password == Request.Form["password"])*/
+            if (client == null || !client.Password.Equals(Request.Form["password"]))
             {
-                Response.Redirect("ClientCart.aspx");
+                Session["message"] = "Email ou mot de passe incorrecte!";
+                Response.Redirect("Login.aspx");
             } else
             {
+                Session["UserIn"] = client.Id;
                 Response.Redirect("ClientCart.aspx");
             }
+        }
+
+        protected void Button1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -72,8 +72,8 @@
                     <asp:DataList ID="DataList1" runat="server" DataKeyField="Id" DataSourceID="SqlDataSource1" class="col-lg-4 col-sm-6 mb-4" HorizontalAlign="Center" RepeatColumns="4" Width="95%" CellPadding="20" CellSpacing="50">
                         <ItemTemplate>
                                 <div class="portfolio-item">
-                                    <a class="portfolio-link text-center" data-toggle="modal" href="#portfolioModal2"
-                                        onclick="onDetails('<%# Eval("Picture") %>', '<%# Eval("Designation") %>', '<%# Eval("Prix") %>');">
+                                    <a class="portfolio-link text-center" href="ProductDetails.aspx"
+                                        onclick="onDetails('<%# Eval("Id") %>', '<%# Eval("Picture") %>', '<%# Eval("Designation") %>', '<%# Eval("Prix") %>');">
                                         <div class="portfolio-hover">
                                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                         </div>
@@ -189,10 +189,8 @@
                                     <img class="img-fluid d-block mx-auto" id="pictureModal" src="#" alt="" />
                                     <h4 class="text-uppercase" id="designation"></h4>
                                     <h3 class="" id="price"></h3>
-                                    <button class="btn btn-primary mt-3" data-dismiss="modal" type="button">
-                                        <i class="fas fa-shopping-cart mr-1"></i>
-                                        Ajouter au Panier
-                                    </button>
+                                    <button class="btn btn-primary mt-3" data-dismiss="modal" type="button" 
+                                        onclick="onValidateAchat(localStorage.getItem('selectedItem'))">Ajouter au Panier</button>
                                 </div>
                             </div>
                         </div>
@@ -202,14 +200,14 @@
         </div>
 
         <script  type ="text/javascript" >
-            function onDetails(src, designation, price) {
-                var picture = document.getElementById("pictureModal");
-                var des = document.getElementById("designation");
-                var pri = document.getElementById("price");
 
-                picture.src = src;
-                des.innerHTML = designation;
-                pri.innerHTML = price + ' Dhs';
+            function onDetails(id, src, designation, price) {
+                localStorage.setItem('selectedItemId', id);
+                localStorage.setItem('selectedItemSrc', src);
+                localStorage.setItem('selectedItemDesignation', designation);
+                localStorage.setItem('selectedItemPrice', price);
             }
+
 	    </script>
+
 </asp:Content>

@@ -39,7 +39,7 @@
 			      <div class="collapse navbar-collapse" id="navbarResponsive">
 			        <ul class="navbar-nav ml-auto">
 				      	<li class="nav-item" >
-				      		<a class="btn btn-outline-secondary" href="Default.aspx" style="margin-right: 5px;">
+				      		<a class="btn btn-outline-secondary" href="Default.aspx#team" style="margin-right: 5px;">
 						        <i class="fa fa-sign-out"></i> Déconnexion
 						    </a>
 				      	</li>

@@ -12,7 +12,7 @@
         <AssociationConnector Association="BoutiqueParfumsModel.IdCart" ManuallyRouted="false" ></AssociationConnector>
         <AssociationConnector Association="BoutiqueParfumsModel.IdCart2" ManuallyRouted="false" />
         <AssociationConnector Association="BoutiqueParfumsModel.IdProduct" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="BoutiqueParfumsModel.Message" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BoutiqueParfumsModel.Message" Width="1.5" PointX="3" PointY="3.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
